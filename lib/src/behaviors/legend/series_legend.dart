@@ -30,6 +30,7 @@ import 'package:collection/collection.dart' show ListEquality;
 import 'package:flutter/widgets.dart'
     show BuildContext, EdgeInsets, Widget, hashValues;
 import 'package:meta/meta.dart' show immutable;
+
 import '../../chart_container.dart' show ChartContainerRenderObject;
 import '../chart_behavior.dart'
     show BuildableBehavior, ChartBehavior, GestureType;
@@ -288,7 +289,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
 
   @override
   int get hashCode {
-    return hashValues(
+    return Object.hash(
         selectionModelType,
         contentBuilder,
         position,
